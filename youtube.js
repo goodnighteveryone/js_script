@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         New Userscript
+// @name         去油管会员弹窗
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  去油管会员弹窗
