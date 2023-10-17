@@ -16,20 +16,18 @@
   var curUrl = window.location.href;
   function handleUrlChange() {
     console.log("111", curUrl);
-    if (curUrl !== window.location.href) {
-      console.log("222");
-      setTimeout(() => {
-        let dialog = document.getElementsByClassName("ytd-popup-container")[0];
-        console.log(dialog, "dialog");
-        curUrl = window.location.href;
-        if (dialog) {
-          let cancel = dialog.getElementsByClassName(
-            "yt-spec-touch-feedback-shape__fill"
-          )[0];
-          console.log(cancel, "cancel");
-          cancel && cancel.click();
-        }
-      }, 500);
-    }
+    console.log("222");
+    setTimeout(() => {
+      let dialog = document.getElementsByTagName("tp-yt-paper-dialog")[0];
+      console.log(dialog, "dialog");
+      curUrl = window.location.href;
+      if (dialog) {
+        let cancel = dialog.getElementsByClassName(
+          "yt-spec-touch-feedback-shape__fill"
+        )[0];
+        console.log(cancel, "cancel");
+        cancel && cancel.click();
+      }
+    }, 500);
   }
 })();
